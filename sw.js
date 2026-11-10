@@ -1,5 +1,5 @@
 // Maré — service worker: guarda o app no aparelho para funcionar offline. Não toca nos seus dados.
-const CACHE = 'mare-6CIRCN6coDC1';
+const CACHE = 'mare-vQKaGjmHJeiy';
 const ASSETS = ["./","./index.html","./manifest.webmanifest","./icon-192.png","./icon-512.png","./icon-maskable-512.png","./icon-1024.png","./icon-maskable-1024.png","./apple-touch-icon.png","./favicon.png"];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS.map((u) => new Request(u, { cache: 'reload' })))));
